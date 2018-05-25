@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Nav from './MainNavigation';
+import Dashboard from './Dashboard';
+import LatestTrades from './LatestTrades';
 
-const BitsoApp = styled.section`
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-`
 
 const Title = styled.h1`
+  margin: 0;
   font-size: 1.5em;
-  text-align: center;
+  text-align: left;
   color: white;
-`;
-
-const Wrapper = styled.section`
-  padding: 2em;
-  background: none;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
 `;
 
 class App extends Component {
   render() {
     return (
-      <BitsoApp>
-      <Wrapper>
-        <Title> BITSO APP</Title>
-      </Wrapper>
-      </BitsoApp>
+      <div>
+          <Nav>
+              <Title> BITSO APP</Title>
+          </Nav>
+          <Dashboard>
+            <LatestTrades/>
+          </Dashboard>
+      </div>
+
     );
   }
 }
